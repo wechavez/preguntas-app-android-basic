@@ -59,6 +59,21 @@
             android:layout_gravity="center"
             android:text="Ingresar" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes una cuenta?"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/go_to_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regístrate"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/design_default_color_secondary" />
+
+
     </LinearLayout>
 
 
