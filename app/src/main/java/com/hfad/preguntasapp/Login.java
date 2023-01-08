@@ -1,14 +1,19 @@
 package com.hfad.preguntasapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 public class Login extends AppCompatActivity {
 
@@ -21,6 +26,13 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        if (toolbar != null) {
+            setSupportActionBar( toolbar );
+        }
+
 
         // get email and password EditText ref
         EditText emailEditText = findViewById(R.id.input_email);
@@ -65,7 +77,27 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void fireToast( String message ) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.principal_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch ( item.getItemId() ) {
+            case R.id.about_us_item:
+                Intent integrantesActivityIntent = new Intent(this, Integrantes.class);
+                startActivity( integrantesActivityIntent );
+                return true;
+
+            default:
+                return true;
+        }
+    }
+
+    private void fireToast(String message ) {
         Toast.makeText(
                 getApplicationContext(),
                 message,

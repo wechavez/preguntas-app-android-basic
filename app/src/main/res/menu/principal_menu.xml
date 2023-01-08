@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:icon="@drawable/ic_baseline_more_vert_24">
+
+    <item android:id="@+id/nuevo_item" android:title="@string/nuevo">
+        <menu>
+            <item
+                android:id="@+id/document_item"
+                android:icon="@drawable/ic_baseline_insert_drive_file_24"
+                android:title="@string/document" />
+
+            <item
+                android:id="@+id/presentation_item"
+                android:icon="@drawable/ic_baseline_co_present_24"
+                android:title="@string/presentation" />
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/settings_item"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/about_us_item"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="@string/about_us" />
+
+</menu>

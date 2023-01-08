@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Preguntas App</string>
+    <string name="title">Grupo #6</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -35,4 +36,10 @@
 
     <string name="radio_masculino">Masculino</string>
     <string name="radio_femenino">Femenino</string>
+
+    <string name="nuevo">Nuevo</string>
+    <string name="document">Documento</string>
+    <string name="presentation">Presentación</string>
+    <string name="settings">Ajustes</string>
+    <string name="about_us">Acerca de</string>
 </resources>
