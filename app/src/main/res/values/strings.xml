@@ -41,5 +41,12 @@
     <string name="document">Documento</string>
     <string name="presentation">Presentación</string>
     <string name="settings">Ajustes</string>
+    <string name="datos_sd">Mostrar Datos</string>
     <string name="about_us">Acerca de</string>
+
+    <string name="dialog_title">Guardar Sessión</string>
+    <string name="dialog_message">¿Desea mantener activa la sessión?</string>
+    <string name="dialog_positive">Guardar</string>
+    <string name="dialog_cancel">No Guardar</string>
+    <string name="borrar_preferencias">Borrar Preferencias</string>
 </resources>

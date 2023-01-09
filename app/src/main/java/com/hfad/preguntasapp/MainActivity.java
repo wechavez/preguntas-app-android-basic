@@ -2,10 +2,13 @@ package com.hfad.preguntasapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView usernameTextView = findViewById(R.id.username);
         usernameTextView.setText( "User or email: " + bundle.getString( "email" ) );
+
+        Button borrarPreferenciasButton = findViewById(R.id.borrar);
 
         Button trueButton = (Button) findViewById(R.id.true_button);
         Button falseButton = (Button) findViewById(R.id.false_button);
@@ -97,6 +102,16 @@ public class MainActivity extends AppCompatActivity {
                     trueButton.setVisibility(View.INVISIBLE);
                     falseButton.setVisibility(view.INVISIBLE);
                 }
+            }
+        });
+
+        borrarPreferenciasButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+                preferences.edit().clear().commit();
+
+                Toast.makeText(MainActivity.this, "Preferencias borradas", Toast.LENGTH_SHORT).show();
             }
         });
     }

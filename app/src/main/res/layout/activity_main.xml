@@ -74,6 +74,15 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Boton de borrar user shared preferences -->
+        <Button
+            android:id="@+id/borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="32dp"
+            android:layout_gravity="center"
+            android:text="@string/borrar_preferencias" />
+
 
     </LinearLayout>
 

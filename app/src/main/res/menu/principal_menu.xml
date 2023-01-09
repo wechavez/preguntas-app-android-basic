@@ -24,8 +24,11 @@
         android:title="@string/settings" />
 
     <item
+        android:id="@+id/datos_sd_item"
+        android:title="@string/datos_sd" />
+
+    <item
         android:id="@+id/about_us_item"
-        android:icon="@drawable/ic_baseline_menu_24"
         android:title="@string/about_us" />
 
 </menu>
